@@ -1,0 +1,44 @@
+
+// Mixin for responsive screen size.
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1280px;
+$extra-wide-breakpoint: 1440px;
+
+@mixin tablet() {
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin extraWideScreen() {
+  @media (min-width: $extra-wide-breakpoint) {
+    @content;
+  }
+}
+
+
+// Flex Mixin
+@mixin flex() {
+    display: flex;
+    align-items: center;
+    flex-flow: wrap row;
+}
+
+// Font Mixin
+@mixin kanitNormal() {
+    font-family: 'Kanit', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@mixin kanitItalic() {
+    font-family: 'Kanit', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+}

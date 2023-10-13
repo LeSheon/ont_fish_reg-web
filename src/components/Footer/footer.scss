@@ -1,0 +1,55 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.footer {
+    width: 100%;
+    background-color: $light-grey;
+    padding: $mobile-padding;
+    @include flex();
+    flex-direction: column;
+
+    @include tablet {
+        flex-direction: row;
+    }
+
+    &__ont-container {
+        @include flex();
+        justify-content: center;
+        text-align: center;
+
+        @include tablet {
+            width: 70%;
+            justify-content: flex-start;
+        }
+    }
+
+    &__message {
+        font-size: 11px;
+        padding: 0 $mobile-padding;
+
+        @include tablet() {
+            font-size: 13px;
+            width: 50%;
+        }
+    }
+
+    &__ont-logo {
+        width: 100%;
+        max-width: 240px;
+        padding: 0 $mobile-padding;
+    }
+
+    &__my-container {
+        @include flex();
+        justify-content: space-around;
+        
+        @include tablet {
+            width: 30%;
+        }
+    }
+
+    &__my-logo {
+        width: 60px;
+        margin: 0 $mobile-padding;
+    }
+}
