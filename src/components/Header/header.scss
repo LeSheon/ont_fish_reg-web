@@ -81,9 +81,8 @@
 
         @include tablet {
             top: 34px;
-            margin: 0 $tablet-padding;
+            right: $tablet-padding;
             width: 50px;
-            
         }
     }
 
