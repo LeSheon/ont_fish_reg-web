@@ -3,12 +3,16 @@ import { slide as Menu } from 'react-burger-menu';
 import gitHub from "../../assets/logos/github-mark.svg";
 import linkedIn from "../../assets/logos/linkedin-logo.png";
 import fishIcon from "../../assets/icons/swimming_fish.svg";
+import { useNavigate } from "react-router";
 
 export default function Header() {
+
+    const navigate = useNavigate();
 
     function showSettings() {
 
     }
+
 
     return (
         <header className="header">
@@ -27,7 +31,7 @@ export default function Header() {
                 </Menu>
             </div>
             <div className="header__title-container">
-                <a className="header__title-link"><h2 className="header__title">FYI Ontario FMZ</h2></a>
+                <a href="" onClick={() => navigate('/')} className="header__title-link"><h2 className="header__title">FYI Ontario FMZ</h2></a>
                 <img className="header__title-icon" src={fishIcon} alt=""/>
             </div>
         </header>
