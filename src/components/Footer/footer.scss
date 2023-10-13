@@ -11,6 +11,7 @@
 
     @include tablet {
         flex-direction: row;
+        padding: $mobile-padding $tablet-padding;
     }
 
     // Ontario Text and Logo Container

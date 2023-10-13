@@ -12,6 +12,9 @@
     @include flex();
     justify-content: center;
 
+    @include tablet {
+        padding: 0 $tablet-padding;
+    }
     
 
     // Hamburger Button Position
@@ -60,6 +63,22 @@
 
         @include tablet {
             font-size: 38px;
+        }
+    }
+
+    // Main Title Icon
+    &__title-icon {
+        filter: invert(1);
+        width: 30px;
+        position: absolute;
+        top: 20px;
+        right: $mobile-padding;
+
+        @include tablet {
+            top: 34px;
+            margin: 0 $tablet-padding;
+            width: 50px;
+            
         }
     }
 

@@ -9,7 +9,7 @@ export default function Main() {
             </div>
             <div className="main__zone-container">
                 <div className="main__zone-text-container">
-                    <span className="main__zone">Zone 1</span>
+                    <span className="main__zone main__zone--first">Zone 1</span>
                     <span className="main__zone">Zone 2</span>
                     <span className="main__zone">Zone 3</span>
                     <span className="main__zone">Zone 4</span>

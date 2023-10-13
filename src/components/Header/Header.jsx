@@ -2,7 +2,7 @@ import "./header.scss";
 import { slide as Menu } from 'react-burger-menu';
 import gitHub from "../../assets/logos/github-mark.svg";
 import linkedIn from "../../assets/logos/linkedin-logo.png";
-
+import fishIcon from "../../assets/icons/swimming_fish.svg";
 
 export default function Header() {
 
@@ -28,6 +28,7 @@ export default function Header() {
             </div>
             <div className="header__title-container">
                 <h2 className="header__title">FYI Ontario FMZ</h2>
+                <img className="header__title-icon" src={fishIcon} alt=""/>
             </div>
         </header>
     );
