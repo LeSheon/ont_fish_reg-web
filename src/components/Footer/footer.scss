@@ -1,9 +1,10 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
+// Footer Component
 .footer {
     width: 100%;
-    background-color: $light-grey;
+    background-color: rgb(175, 175, 175);
     padding: $mobile-padding;
     @include flex();
     flex-direction: column;
@@ -12,6 +13,7 @@
         flex-direction: row;
     }
 
+    // Ontario Text and Logo Container
     &__ont-container {
         @include flex();
         justify-content: center;
@@ -23,6 +25,7 @@
         }
     }
 
+    // Text message for notice
     &__message {
         font-size: 11px;
         padding: 0 $mobile-padding;
@@ -33,23 +36,26 @@
         }
     }
 
+    // Ontario Logo size
     &__ont-logo {
         width: 100%;
         max-width: 240px;
         padding: 0 $mobile-padding;
     }
 
+    // Container for git and linked in logo
     &__my-container {
         @include flex();
-        justify-content: space-around;
+        justify-content: center;
         
         @include tablet {
             width: 30%;
         }
     }
 
+    // Git and Linked in logo
     &__my-logo {
-        width: 60px;
+        width: 28px;
         margin: 0 $mobile-padding;
     }
 }

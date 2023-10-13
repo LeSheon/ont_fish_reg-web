@@ -1,0 +1,47 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+// Main Component
+.main {
+    width: 100%;
+    padding: $mobile-padding;
+
+    @include flex();
+    justify-content: center;
+    flex-direction: column;
+
+    // Mapbox Container
+    &__mapbox {
+        width: 100%;
+        @include flex();
+        justify-content: center;
+    }
+
+    // Dummy Data for Mapbox and its size
+    &__dummy-mapbox {
+        width: 100%;
+    }
+
+    // Outer container for Zone List
+    &__zone-container {
+        width: 100%;
+        padding: $mobile-padding;
+        @include flex();
+        justify-content: space-around;
+    }
+
+    // Inner Container
+    &__zone-text-container {
+        width: 50%;
+        @include flex();
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    // Zone Text
+    &__zone {
+        font-size: 18px;
+        @include kanitNormal();
+        padding: $mobile-padding 0;
+    }
+}

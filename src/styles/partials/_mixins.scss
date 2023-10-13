@@ -42,3 +42,15 @@ $extra-wide-breakpoint: 1440px;
     font-style: italic;
     font-weight: 600;
 }
+
+@mixin UbuntuRegular() {
+  font-family: 'Ubuntu', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin UbuntuBold() {
+  font-family: 'Ubuntu', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
