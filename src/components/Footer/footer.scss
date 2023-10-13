@@ -1,28 +1,31 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
+// Footer Component
 .footer {
     width: 100%;
-    background-color: $light-grey;
+    background-color: rgb(175, 175, 175);
     padding: $mobile-padding;
     @include flex();
     flex-direction: column;
 
     @include tablet {
         flex-direction: row;
+        padding: $mobile-padding $tablet-padding;
     }
 
+    // Ontario Text and Logo Container
     &__ont-container {
         @include flex();
         justify-content: center;
         text-align: center;
 
         @include tablet {
-            width: 70%;
-            justify-content: flex-start;
+            width: 100%;
         }
     }
 
+    // Text message for notice
     &__message {
         font-size: 11px;
         padding: 0 $mobile-padding;
@@ -33,23 +36,12 @@
         }
     }
 
+    // Ontario Logo size
     &__ont-logo {
         width: 100%;
-        max-width: 240px;
+        max-width: 180px;
         padding: 0 $mobile-padding;
-    }
-
-    &__my-container {
-        @include flex();
-        justify-content: space-around;
-        
-        @include tablet {
-            width: 30%;
-        }
-    }
-
-    &__my-logo {
-        width: 60px;
-        margin: 0 $mobile-padding;
+        padding-top: $mobile-padding;
+        align-self: flex-end;
     }
 }

@@ -1,24 +1,49 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
+
+// Main Header Size
 .header {
-    background-image: url("../../assets/images/light-green-gradient-BG.jpg");
-    background-position: center;
-    background-repeat: none;
-    background-size: cover;
+    background-color: black;
 
     width: 100%;
-    padding: $mobile-padding;
+    padding: 0 $mobile-padding;
 
     @include flex();
     justify-content: center;
 
-    &__mobile-nav-container {
+    @include tablet {
+        padding: 0 $tablet-padding;
+    }
+    
+
+    // Hamburger Button Position
+    &__hamburger {
+        position: absolute;
+        left: $mobile-padding;
         @include tablet {
-            display: none;
+            position: absolute;
+            left: $tablet-padding;
         }
     }
 
+    // sperated div for Nav from hamburger menu's logo div
+    &__menu-container {
+        width: 100%;
+        display: flex !important;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    // Nav Menu Text
+    &__menu-item {
+        padding: 8px 0;
+        @include UbuntuRegular();
+        color: white;
+        text-decoration: none;
+    }
+
+    // Main Title Container
     &__title-container {
         width: 80%;
         padding: 0 $mobile-padding;
@@ -30,9 +55,134 @@
         }
     }
 
-    &__title-image {
+    // Main Title Text
+    &__title {
+        color: white;
+        font-size: 23px;
+        @include UbuntuBold();
+
+        @include tablet {
+            font-size: 38px;
+        }
+    }
+
+    // Main Title Icon
+    &__title-icon {
+        filter: invert(1);
+        width: 30px;
+        position: absolute;
+        top: 20px;
+        right: $mobile-padding;
+
+        @include tablet {
+            top: 34px;
+            margin: 0 $tablet-padding;
+            width: 50px;
+            
+        }
+    }
+
+    // Container for git and linkedin logo
+    &__my-container {
         width: 100%;
-        max-width: 360px;
-        border-radius: 10px;
+        display: flex !important;
+        justify-content: center;
+        padding-bottom: $mobile-padding;
+    }
+
+    // Git and Linkedin logo
+    &__my-logo {
+        width: 28px;
+        margin: 0 8px;
+        filter: invert(1);
     }
 }
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+    position: relative;
+    width: 20px;
+    height: 16px;
+
+    @include tablet {
+        width: 32px;
+        height: 28px;
+    }
+  }
+  
+  /* Color/shape of burger icon bars */
+  .bm-burger-bars {
+    background: white;
+  }
+  
+  /* Color/shape of burger icon bars on hover*/
+  .bm-burger-bars-hover {
+    background: #a90000;
+  }
+  
+  /* Position and sizing of clickable cross button */
+  .bm-cross-button {
+    height: 24px;
+    width: 24px;
+  }
+  
+  /* Color/shape of close button cross */
+  .bm-cross {
+    background: #bdc3c7;
+  }
+  
+  /*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+  .bm-menu-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;    
+    width: 70vw !important;
+
+    @include tablet {
+        width: 30vw !important;
+    }
+  }
+  
+  /* General sidebar styles */
+  .bm-menu {
+    background: rgba(35, 35, 35);
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+    border-radius: 10px;
+  }
+  
+  /* Morph shape necessary with bubble or elastic */
+  .bm-morph-shape {
+    fill: #373a47;
+  }
+  
+  /* Wrapper for item list */
+  .bm-item-list {
+    color: white;
+    padding: 0.8em;
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Individual item */
+  .bm-item {
+    display: inline-block;
+    text-decoration: none;
+
+    &:visited {
+        color: white;
+    }
+  }
+  
+  /* Styling of overlay */
+  .bm-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+  }

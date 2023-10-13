@@ -1,0 +1,88 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+// Main Component
+.main {
+    width: 100%;
+    padding: $mobile-padding;
+
+    @include flex();
+    justify-content: center;
+    flex-direction: column;
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: $tablet-padding;
+    }
+
+    // Mapbox Container
+    &__mapbox {
+        width: 100%;
+        @include flex();
+        justify-content: center;
+        
+        border-radius: 8px;
+
+        @include tablet {
+            width: 75%;
+        }
+    }
+
+    // Dummy Data for Mapbox and its size
+    &__dummy-mapbox {
+        width: 100%;
+
+        border-radius: 8px;
+
+        @include tablet {
+            height: 95vh;
+        }
+    }
+
+    // Outer container for Zone List
+    &__zone-container {
+        width: 100%;
+        padding: $mobile-padding;
+        @include flex();
+        justify-content: space-around;
+
+        @include tablet {
+            width: 20%;
+            height: 95vh;
+            overflow-y: scroll;
+            background-color: lightgray;
+            border-radius: 8px;
+        }
+    }
+
+    // Inner Container
+    &__zone-text-container {
+        width: 50%;
+        @include flex();
+        justify-content: center;
+        flex-direction: column;
+
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+    // Zone Text
+    &__zone {
+        font-size: 18px;
+        @include kanitNormal();
+        padding: $mobile-padding 0;
+
+
+        @include tablet {
+            width: 60%;
+            text-align: center;
+            border-top: 2px solid rgb(180, 180, 180);
+
+            &--first {
+                border: none;
+            }
+        }
+    }
+}
