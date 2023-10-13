@@ -1,0 +1,38 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.header {
+    background-image: url("../../assets/images/light-green-gradient-BG.jpg");
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+
+    width: 100%;
+    padding: $mobile-padding;
+
+    @include flex();
+    justify-content: center;
+
+    &__mobile-nav-container {
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__title-container {
+        width: 80%;
+        padding: 0 $mobile-padding;
+        @include flex();
+        justify-content: center;
+
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+    &__title-image {
+        width: 100%;
+        max-width: 360px;
+        border-radius: 10px;
+    }
+}
