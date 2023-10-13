@@ -4,10 +4,6 @@ import ontLogo from "../../assets/logos/Ontario-logo.png";
 
 export default function Footer() {
 
-    const Ont_URL = process.env.REACT_APP_ONT_FMZ_URL;
-
-    console.log(Ont_URL);
-
     return (
         <footer className="footer">
             <div className="footer__ont-container">
