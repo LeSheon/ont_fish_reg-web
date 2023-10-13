@@ -27,7 +27,7 @@ export default function Header() {
                 </Menu>
             </div>
             <div className="header__title-container">
-                <h2 className="header__title">FYI Ontario FMZ</h2>
+                <a className="header__title-link"><h2 className="header__title">FYI Ontario FMZ</h2></a>
                 <img className="header__title-icon" src={fishIcon} alt=""/>
             </div>
         </header>
