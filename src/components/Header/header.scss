@@ -4,11 +4,6 @@
 
 // Main Header Size
 .header {
-    // background-image: url("../../assets/images/light-green-gradient-BG.jpg");
-    // background-position: center;
-    // background-repeat: none;
-    // background-size: cover;
-
     background-color: black;
 
     width: 100%;
@@ -19,11 +14,22 @@
 
     
 
+    // Hamburger Button Position
     &__hamburger {
+        position: absolute;
+        left: $mobile-padding;
         @include tablet {
-            position: fixed;
-            left: 5%;
+            position: absolute;
+            left: $tablet-padding;
         }
+    }
+
+    // sperated div for Nav from hamburger menu's logo div
+    &__menu-container {
+        width: 100%;
+        display: flex !important;
+        align-items: flex-start;
+        flex-direction: column;
     }
 
     // Nav Menu Text
@@ -53,8 +59,23 @@
         @include UbuntuBold();
 
         @include tablet {
-            font-size: 28px;
+            font-size: 38px;
         }
+    }
+
+    // Container for git and linkedin logo
+    &__my-container {
+        width: 100%;
+        display: flex !important;
+        justify-content: center;
+        padding-bottom: $mobile-padding;
+    }
+
+    // Git and Linkedin logo
+    &__my-logo {
+        width: 28px;
+        margin: 0 8px;
+        filter: invert(1);
     }
 }
 
@@ -62,7 +83,12 @@
 .bm-burger-button {
     position: relative;
     width: 20px;
-    height: 16px;   
+    height: 16px;
+
+    @include tablet {
+        width: 32px;
+        height: 28px;
+    }
   }
   
   /* Color/shape of burger icon bars */
@@ -118,6 +144,10 @@
   .bm-item-list {
     color: white;
     padding: 0.8em;
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: space-between;
+    align-items: center;
   }
   
   /* Individual item */

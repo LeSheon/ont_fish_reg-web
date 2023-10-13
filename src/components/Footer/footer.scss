@@ -20,8 +20,7 @@
         text-align: center;
 
         @include tablet {
-            width: 70%;
-            justify-content: flex-start;
+            width: 100%;
         }
     }
 
@@ -39,23 +38,9 @@
     // Ontario Logo size
     &__ont-logo {
         width: 100%;
-        max-width: 240px;
+        max-width: 180px;
         padding: 0 $mobile-padding;
-    }
-
-    // Container for git and linked in logo
-    &__my-container {
-        @include flex();
-        justify-content: center;
-        
-        @include tablet {
-            width: 30%;
-        }
-    }
-
-    // Git and Linked in logo
-    &__my-logo {
-        width: 28px;
-        margin: 0 $mobile-padding;
+        padding-top: $mobile-padding;
+        align-self: flex-end;
     }
 }
