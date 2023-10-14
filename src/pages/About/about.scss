@@ -2,5 +2,32 @@
 @use "../../styles/partials/variables" as *;
 
 .about {
+    width: 100%;
     padding: $mobile-padding;
+    @include flex();
+    flex-direction: column;
+    justify-content: center;
+
+    &__title {
+        font-size: 28px;
+        @include kanitNormal;
+        font-weight: 600;
+
+        @include tablet {
+            font-size: 36px;
+        }
+    }
+
+    &__text-container {
+        align-self: flex-start;
+    }
+
+    &__text {
+        font-size: 20px;
+        @include kanitNormal;
+
+        @include tablet {
+            font-size: 26px;
+        }
+    }
 }
