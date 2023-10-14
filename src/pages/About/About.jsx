@@ -18,6 +18,12 @@ export default function About() {
                 </h4>
             </div>
 
+            <div className="about__text-container">
+                <h4 className="about__text">
+                    The site was built and designed with React and map feature was implemented through Mapbox's custom map through Mabox Studio. 
+                </h4>
+            </div>
+
             <div className="about__more-info-container">
                 <h4 className="about__text">
                     More detail information and original source of document can be found from 'URL', the offical Onatrio government's website.
