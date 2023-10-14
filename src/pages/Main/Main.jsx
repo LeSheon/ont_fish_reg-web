@@ -1,36 +1,46 @@
 import "./main.scss";
 import fmzDummy from "../../assets/images/fisheries-management-zones.jpg";
+import { useState, useEffect } from "react";
+import { axiosGetZones } from "../../utils/AxiosHelper";
+
 
 export default function Main() {
+    // State List of Zone 01 ~ 20
+    const [zoneList, setZoneList] = useState(null);
+
+    useEffect(() => {
+        // Async function to set ZoneList. GetZones from utils/AxioHelper.js
+        async function setList() {
+            const { data } = await axiosGetZones();
+            setZoneList(data);
+        }
+
+        setList();
+
+    }, [])
+
+    if(!zoneList) { return <div>LOADING</div>}
+
+    // Divde point on ZoneList's length for 2 seperated div for mobile view.
+    const halfLength = (zoneList.length%2===0 ? zoneList.length/2 : (zoneList.length-1)/2);
+
     return (
         <section className="main">
+            {/* Where the Mapbox goes in */}
             <div className="main__mapbox">
                 <img className="main__dummy-mapbox" src={fmzDummy} alt=""/>
             </div>
             <div className="main__zone-container">
+                {/* Divde Text Container into 2 for better mobile view */}
                 <div className="main__zone-text-container">
-                    <span className="main__zone main__zone--first">Zone 1</span>
-                    <span className="main__zone">Zone 2</span>
-                    <span className="main__zone">Zone 3</span>
-                    <span className="main__zone">Zone 4</span>
-                    <span className="main__zone">Zone 5</span>
-                    <span className="main__zone">Zone 6</span>
-                    <span className="main__zone">Zone 7</span>
-                    <span className="main__zone">Zone 8</span>
-                    <span className="main__zone">Zone 9</span>
-                    <span className="main__zone">Zone 10</span>
+                    {zoneList.filter((zone, i) => i<halfLength).map(zone => {
+                        return <span className={`main__zone${(zone.id===1? " main__zone--first": "")}`}>{zone.zone}</span>
+                    })}
                 </div>
                 <div className="main__zone-text-container">
-                    <span className="main__zone">Zone 11</span>
-                    <span className="main__zone">Zone 12</span>
-                    <span className="main__zone">Zone 13</span>
-                    <span className="main__zone">Zone 14</span>
-                    <span className="main__zone">Zone 15</span>
-                    <span className="main__zone">Zone 16</span>
-                    <span className="main__zone">Zone 17</span>
-                    <span className="main__zone">Zone 18</span>
-                    <span className="main__zone">Zone 19</span>
-                    <span className="main__zone">Zone 20</span>
+                    {zoneList.filter((zone, i) => i>=halfLength).map(zone => {
+                        return <span className={`main__zone${(zone.id===1? " main__zone--first": "")}`}>{zone.zone}</span>
+                    })}
                 </div>
             </div>
         </section>
