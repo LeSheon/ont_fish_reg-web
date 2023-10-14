@@ -1,8 +1,22 @@
 import "./fishList.scss";
 import xButton from "../../assets/icons/x-button.png";
+import { useEffect } from "react";
+import { useState } from "react";
+import { axiosGetZoneById } from "../../utils/AxiosHelper";
+import FishDetail from "../FishDetail/FishDetail";
 
 export default function FishList({setShowZoneDetail, zone}) {
 
+    const [fishList, setFishList] = useState(null);
+    
+    useEffect(() => {
+        async function setFishList() {
+            const {data} = await axiosGetZoneById(zone.id);
+            setFishList(data);
+        }
+    })    
+
+    if(!fishList) return <div className="fish-list__loading"> Loading Fish Data </div>
 
     return (
         <section onClick={() => {setShowZoneDetail(false)}} className="fish-list">
@@ -12,10 +26,9 @@ export default function FishList({setShowZoneDetail, zone}) {
                     <h2 className="fish-list__title">{zone.zone}</h2>
                 </div>
                 <ul className="fish-list__list">
-                    <li className="fish-list__list-item">Bass</li>
-                    <li className="fish-list__list-item">Splake</li>
-                    <li className="fish-list__list-item">Sunfish</li>
-                    <li className="fish-list__list-item">Yellow Perch</li>
+                    {fishList.map(fish => {
+                        return <FishDetail key={fish.id}/>
+                    })}
                 </ul>
             </div>
         </section>
