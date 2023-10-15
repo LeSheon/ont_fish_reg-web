@@ -53,4 +53,26 @@
             height: 95vh;
         }
     }
+
+    &__some-text-container {
+        width: 100%;
+        padding: $mobile-padding;
+        @include flex;
+        justify-content: center;
+
+        @include tablet {
+            padding: $tablet-padding;
+        }
+    }
+
+    &__mapbox-info {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+
+        @include tablet {
+            text-align: left;
+            padding: 0 25%;
+        }
+    }
 }

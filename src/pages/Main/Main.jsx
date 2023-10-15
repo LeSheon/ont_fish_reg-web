@@ -16,6 +16,11 @@ export default function Main() {
                     {/* <ZoneMap /> */}
                 </div>
                 <ZoneList />
+                <div className="main__some-text-container">
+                    <h6 className="main__mapbox-info">
+                        Map was featured by Mapbox. © Mapbox
+                    </h6>
+                </div>
             </div>
         </section>
     );
