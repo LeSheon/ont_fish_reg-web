@@ -9,6 +9,6 @@ export async function axiosGetZones() {
 	return await axios.get(`${API_URL}zone`);
 }
 
-export async function axiosGetZoneByNum(num) {
-    return await axios.get(`${API_URL}zone/${num}`);
+export async function axiosGetZoneById(id) {
+    return await axios.get(`${API_URL}zone/${id}`);
 }
