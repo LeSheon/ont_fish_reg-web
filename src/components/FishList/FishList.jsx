@@ -21,10 +21,10 @@ export default function FishList({setShowZoneDetail, zone}) {
     if(!fishList) return <div className="fish-list__loading"> Loading Fish Data </div>
 
     return (
-        <section onClick={() => {setShowZoneDetail(false)}} className="fish-list">
+        <section className="fish-list">
             <div onClick={e => e.stopPropagation()} className="fish-list__inner-container">
                 <div className="fish-list__close-container">
-                    <img onClick={() => {setShowZoneDetail(false)}} className="fish-list__close-button" src={xButton} alt="Close Popup"/>
+                    <img onClick={() => {setShowZoneDetail()}} className="fish-list__close-button" src={xButton} alt="Close Popup"/>
                 </div>
                 <div className="fish-list__title-container">
                     <h2 className="fish-list__title">{zone.zone}</h2>

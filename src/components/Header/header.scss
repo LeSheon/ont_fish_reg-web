@@ -99,6 +99,11 @@
 
         @include tablet {
             width: 50px;
+            margin-right: $tablet-padding;
+        }
+
+        @include desktop {
+          margin: 0;
         }
     }
 
