@@ -50,6 +50,13 @@
         @include UbuntuRegular();
         color: white;
         text-decoration: none;
+        padding: $mobile-padding;
+        border-radius: 8px;
+
+        &:hover {
+          cursor: pointer;
+          background-color: #373a47;
+        }
     }
 
     // Main Title Container
