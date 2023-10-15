@@ -1,0 +1,36 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.comment {
+    width: 100%;
+    padding: $mobile-padding;
+
+    @include flex;
+    flex-direction: column;
+
+    @include tablet {
+        padding: $tablet-padding;
+    }
+
+    &__announce {
+        @include UbuntuBold;
+        margin: 0;
+    }
+
+    &__list {
+        width: 100%;
+        list-style: none;
+    }
+
+    &__list-item {
+        width: 100%;
+        @include flex;
+        flex-direction: column;
+    }
+
+    &__item-date {
+        align-self: flex-end;
+        font-size: 12px;
+        margin: 0 4px;
+    }
+}

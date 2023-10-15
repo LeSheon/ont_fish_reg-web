@@ -20,8 +20,8 @@ export default function Header() {
                 <Menu>
                     <div className="header__menu-container">
                         <a id="home" className="header__menu-item" href="/">Home</a>
-                        <a id="about" className="header__menu-item" href="/about">About</a>
-                        <a id="contact" className="header__menu-item" href="/contact">Contact</a>
+                        <a id="comment" className="header__menu-item" onClick={() => {navigate('/comment')}}>Comment</a>
+                        <a id="about" className="header__menu-item">About</a>
                     </div>
 
                     <div className="header__my-container">
