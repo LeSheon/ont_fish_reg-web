@@ -10,10 +10,12 @@ export default function FishList({setShowZoneDetail, zone}) {
     const [fishList, setFishList] = useState(null);
     
     useEffect(() => {
-        async function setFishList() {
+        async function setList() {
             const {data} = await axiosGetZoneById(zone.id);
             setFishList(data);
         }
+
+        setList();
     })    
 
     if(!fishList) return <div className="fish-list__loading"> Loading Fish Data </div>
