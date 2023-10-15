@@ -4,9 +4,21 @@
 .about {
     width: 100%;
     padding: $mobile-padding;
-    @include flex();
-    flex-direction: column;
-    justify-content: center;
+
+    @include tablet {
+        padding: $tablet-padding;
+    }
+
+    &__max-width-container {
+        @include flex();
+        flex-direction: column;
+        justify-content: center;
+
+        @include desktop {
+            max-width: $desktop-maxwidth;
+            margin: 0 auto;
+        }
+    }
 
     &__title {
         font-size: 28px;

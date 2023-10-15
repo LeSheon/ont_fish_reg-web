@@ -8,11 +8,13 @@ export default function Main() {
 
     return (
         <section className="main">
-            {/* Where the Mapbox goes in */}
-            <div className="main__mapbox">
-                <img className="main__dummy-mapbox" src={fmzDummy} alt=""/>
+            <div className="main__max-width-container">
+                {/* Where the Mapbox goes in */}
+                <div className="main__mapbox">
+                    <img className="main__dummy-mapbox" src={fmzDummy} alt=""/>
+                </div>
+                <ZoneList />
             </div>
-            <ZoneList />
         </section>
     );
 }

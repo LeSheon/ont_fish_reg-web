@@ -27,10 +27,6 @@
         border-radius: 8px;
         overflow-y: auto;
 
-        &::-webkit-scrollbar {
-            border-radius: 10px;
-        }
-
         @include tablet {
             margin: $tablet-padding;
             padding: $tablet-padding;
