@@ -16,6 +16,10 @@
         @include kanitNormal();
         padding: $mobile-padding 0;
 
+        &:hover {
+            color: $custom-orange;
+            cursor: pointer;
+          }
 
         @include tablet {
             width: 60%;
