@@ -16,13 +16,22 @@
         padding: 0 $tablet-padding;
     }
     
+    &__max-width-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include desktop {
+        max-width: $desktop-maxwidth;
+        margin: 0 auto;
+      }
+    }
 
     // Hamburger Button Position
     &__hamburger {
-        position: absolute;
-        left: $mobile-padding;
+        position: relative;
         @include tablet {
-            position: absolute;
+            position: relative;
             left: $tablet-padding;
         }
     }
@@ -75,13 +84,9 @@
     &__title-icon {
         filter: invert(1);
         width: 30px;
-        position: absolute;
-        top: 20px;
-        right: $mobile-padding;
+        position: relative;
 
         @include tablet {
-            top: 34px;
-            right: $tablet-padding;
             width: 50px;
         }
     }

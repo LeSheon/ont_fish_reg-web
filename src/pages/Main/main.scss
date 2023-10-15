@@ -6,15 +6,28 @@
     width: 100%;
     padding: $mobile-padding;
 
-    @include flex();
-    justify-content: center;
-    flex-direction: column;
-
     @include tablet {
-        flex-direction: row;
-        justify-content: space-between;
         padding: $tablet-padding;
     }
+
+    &__max-width-container {
+        width: 100%;
+        @include flex();
+        justify-content: center;
+        flex-direction: column;
+
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: $tablet-padding;
+        } 
+
+        @include desktop {
+          padding: 0;
+          max-width: $desktop-maxwidth;
+          margin: 0 auto;
+        }
+      }
 
     // Mapbox Container
     &__mapbox {

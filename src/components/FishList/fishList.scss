@@ -6,35 +6,106 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    z-index: 1;
     background: rgb(0, 0, 0, 0.5);
+    z-index: 1;
     top: 0;
     left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &__inner-container {
+        z-index: 1;
+        height: 95%;
+        width: 95%;
         margin: $mobile-padding;
         padding: $mobile-padding;
         background-color: white;
+        border-radius: 10px;
         @include flex();
-        flex-direction: column;
-        align-items: center;
+        justify-content: center;
         border-radius: 8px;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 12px;
+            border-radius: 8px;
+
+            @include tablet {
+                width: 14px;
+            }
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #999999;
+            border: 4px solid transparent;
+            border-radius: 8px;
+            background-clip: padding-box; 
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background-color: #777777;
+        }
+
+        @include tablet {
+            width: 80%;
+            height: 80%;
+            margin: $tablet-padding;
+            padding: $tablet-padding;
+        }
+
+        @include desktop {
+            max-width: $desktop-maxwidth;
+            margin: 0 auto;
+        }
+    }
+
+    &__close-container {
+        width: 100%;
+        @include flex;
+        justify-content: flex-end;
     }
     
     &__close-button {
         align-self: flex-end;
         width: 20px;
+        margin-bottom: $mobile-padding;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        @include tablet {
+            margin: 0 $tablet-padding;
+        }
     }
 
     &__title-container {
         width: 100%;
+        background-color: $custom-blueblack;
+        border-radius: 8px;
+        margin: $mobile-padding 0;
+        padding: $mobile-padding;
+
+        @include tablet {
+            margin: $tablet-padding;
+            padding: $tablet-padding;
+        }
     }
 
     &__title {
         font-size: 28px;
+        color: white;
+        margin: 0;
+
+        @include UbuntuBold;
     }
 
     &__list {
+        width: 100%;
         list-style: none;
+        overflow-y: auto;
+        @include flex;
+        flex-direction: column;
     }
 }
