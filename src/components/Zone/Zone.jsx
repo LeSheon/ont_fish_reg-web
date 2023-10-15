@@ -1,5 +1,5 @@
 import "./zone.scss";
-import FishList from "../Zones/FishList";
+import FishList from "../FishList/FishList";
 import { useState } from "react";
 
 export default function Zone({zoneData}) {
