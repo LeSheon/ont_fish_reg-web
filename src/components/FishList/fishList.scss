@@ -6,19 +6,41 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    z-index: 1;
     background: rgb(0, 0, 0, 0.5);
+    z-index: 1;
     top: 0;
     left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &__inner-container {
+        z-index: 1;
+        height: 95%;
+        width: 95%;
         margin: $mobile-padding;
         padding: $mobile-padding;
         background-color: white;
+        border-radius: 10px;
         @include flex();
-        flex-direction: column;
-        align-items: center;
+        justify-content: center;
         border-radius: 8px;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            border-radius: 10px;
+        }
+
+        @include tablet {
+            margin: $tablet-padding;
+            padding: $tablet-padding;
+        }
+    }
+
+    &__close-container {
+        width: 100%;
+        @include flex;
+        justify-content: flex-end;
     }
     
     &__close-button {
@@ -36,5 +58,8 @@
 
     &__list {
         list-style: none;
+        overflow-y: auto;
+        @include flex;
+        flex-direction: column;
     }
 }
