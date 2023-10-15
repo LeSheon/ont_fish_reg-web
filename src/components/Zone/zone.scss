@@ -13,7 +13,7 @@
     // Zone Text
     &__zone {
         font-size: 18px;
-        @include kanitNormal();
+        @include UbuntuBold;
         padding: $mobile-padding 0;
 
         &:hover {
