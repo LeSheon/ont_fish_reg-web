@@ -34,6 +34,10 @@
             position: relative;
             left: $tablet-padding;
         }
+
+        @include desktop {
+          left: 0;
+        }
     }
 
     // sperated div for Nav from hamburger menu's logo div
