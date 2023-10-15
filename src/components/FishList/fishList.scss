@@ -28,7 +28,12 @@
         overflow-y: auto;
 
         &::-webkit-scrollbar {
+            width: 12px;
             border-radius: 8px;
+
+            @include tablet {
+                width: 14px;
+            }
         }
 
         &::-webkit-scrollbar-thumb {
@@ -43,6 +48,8 @@
         }
 
         @include tablet {
+            width: 80%;
+            height: 80%;
             margin: $tablet-padding;
             padding: $tablet-padding;
         }
@@ -62,17 +69,40 @@
     &__close-button {
         align-self: flex-end;
         width: 20px;
+        margin-bottom: $mobile-padding;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        @include tablet {
+            margin: 0 $tablet-padding;
+        }
     }
 
     &__title-container {
         width: 100%;
+        background-color: $custom-blueblack;
+        border-radius: 8px;
+        margin: $mobile-padding 0;
+        padding: $mobile-padding;
+
+        @include tablet {
+            margin: $tablet-padding;
+            padding: $tablet-padding;
+        }
     }
 
     &__title {
         font-size: 28px;
+        color: white;
+        margin: 0;
+
+        @include UbuntuBold;
     }
 
     &__list {
+        width: 100%;
         list-style: none;
         overflow-y: auto;
         @include flex;

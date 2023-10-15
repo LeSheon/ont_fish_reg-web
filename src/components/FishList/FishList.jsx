@@ -22,7 +22,7 @@ export default function FishList({setShowZoneDetail, zone}) {
 
     return (
         <section onClick={() => {setShowZoneDetail(false)}} className="fish-list">
-            <div className="fish-list__inner-container">
+            <div onClick={e => e.stopPropagation()} className="fish-list__inner-container">
                 <div className="fish-list__close-container">
                     <img onClick={() => {setShowZoneDetail(false)}} className="fish-list__close-button" src={xButton} alt="Close Popup"/>
                 </div>
