@@ -36,3 +36,9 @@ Clicking each species will display its own regulation info.
 Hamburger Nav
 
 ![image](https://github.com/LeSheon/ont_fish_reg-web/assets/110301827/e9e49954-6b6d-4ba1-b934-be92ed4d0e86)
+
+
+### Future Update
+
+Later on it will finish a Feedback Comment page.
+There will be Edit Delete feature with a password according to that comment.
