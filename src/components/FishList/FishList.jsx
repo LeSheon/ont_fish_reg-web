@@ -29,6 +29,12 @@ export default function FishList({setShowZoneDetail, zone}) {
                 <div className="fish-list__title-container">
                     <h2 className="fish-list__title">{zone.zone}</h2>
                 </div>
+                <h4 className="fish-list__info-text">
+                    License Type:
+                </h4>
+                <h4 className="fish-list__info-text">
+                    S = Sport, C = Conservation
+                </h4>
                 <ul className="fish-list__list">
                     {fishList.map(fish => {
                         return <FishDetail key={fish.id} fishData={fish}/>

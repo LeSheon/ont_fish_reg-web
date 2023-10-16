@@ -1,5 +1,4 @@
 import "./main.scss";
-import fmzDummy from "../../assets/images/fisheries-management-zones.jpg";
 import ZoneList from "../../components/ZoneList/ZoneList";
 import ZoneMap from "../../components/ZoneMap/ZoneMap";
 import store from "../../redux/store";
@@ -12,9 +11,7 @@ export default function Main() {
             <div className="main__max-width-container">
                 <Provider store={store}>
                     <div className="main__mapbox">
-                        {/* Comment out below dummy for real mapbox use */}
-                        <img className="main__dummy-mapbox" src={fmzDummy} alt=""/>
-                        {/* <ZoneMap /> */}
+                        <ZoneMap />
                     </div>
                     <ZoneList />
                 </Provider>

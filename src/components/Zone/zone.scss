@@ -15,7 +15,7 @@
         font-size: 18px;
         @include UbuntuBold;
         padding: $mobile-padding 0;
-        color: white;
+        
 
         &:hover {
             color: $custom-orange;
@@ -26,6 +26,7 @@
             width: 60%;
             text-align: center;
             border-top: 2px solid rgb(180, 180, 180);
+            color: white;
 
             &--first {
                 border: none;

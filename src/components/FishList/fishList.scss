@@ -101,6 +101,14 @@
         @include UbuntuBold;
     }
 
+    &__info-text {
+        @include UbuntuRegular;
+        color: $custom-blueblack;
+        font-size: 14px;
+        margin: 0;
+        margin-bottom: $mobile-padding;
+    }
+
     &__list {
         width: 100%;
         list-style: none;
