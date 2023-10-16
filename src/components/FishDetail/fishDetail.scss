@@ -1,0 +1,72 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.fish-detail {
+    width: 100%;
+    @include flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: $mobile-padding;
+
+    @include tablet {
+        margin: 0;
+        padding: $tablet-padding;
+    }
+
+    &__show-click {
+        width: 100%;
+        background-color: black;
+        border-radius: 10px;
+        padding: $mobile-padding;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $slate;
+        }
+
+        @include tablet {
+            padding: $tablet-padding;
+        }
+    }
+
+    &__species {
+        margin: 0;
+        color: white;
+        @include UbuntuBold;
+    }
+
+    &__slide-list {
+        list-style: none;
+        background-color: $custom-grey;
+        border-radius: 10px;
+        visibility: hidden;
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        &--show {
+            height: fit-content;
+            visibility:visible;
+            transition: 0.5s;
+            padding: $mobile-padding;
+
+            @include tablet {
+                padding: $tablet-padding;
+            }
+        }
+    }
+
+    &__slide-item {
+        color: $custom-blueblack;
+        @include UbuntuRegular;
+
+        &--bold {
+            @include UbuntuBold;
+        }
+    }
+}

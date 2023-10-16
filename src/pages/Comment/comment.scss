@@ -1,0 +1,99 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.comment {
+    width: 100%;
+    padding: $mobile-padding;
+
+    @include tablet {
+        padding: $tablet-padding;
+    }
+
+    &__max-width-container {
+        @include flex;
+        flex-direction: column;
+
+        @include desktop {
+            max-width: $desktop-maxwidth;
+            margin: 0 auto;
+        }
+    }
+
+    // Little Announce Text at the top of comment page
+    &__announce {
+        @include UbuntuBold;
+        margin: 0;
+        padding: $mobile-padding;
+        border-radius: 10px;
+        background-color: $custom-blueblack;
+        color: white;
+        width: 100%;
+
+        @include tablet {
+            width: 80%;
+            padding: $tablet-padding;
+        }
+    }
+
+    &__list-container {
+        margin: $mobile-padding 0;
+        width: 100%;
+
+        @include tablet {
+            margin: $tablet-padding 0;
+            width: 80%;
+        }
+    }
+
+    // ul element of Comment List
+    &__list {
+        width: 100%;
+        list-style: none;
+        border-radius: 10px;
+        padding: $mobile-padding;
+        border: 2px solid black;
+        @include flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        @include tablet {
+            padding: $tablet-padding;
+        }
+    }
+
+    // li element of Comment.
+    &__list-item {
+        width: 100%;
+        @include flex;
+        flex-direction: column;
+        margin-bottom: $mobile-padding;
+        border-radius: 10px;
+        padding: $mobile-padding;
+        border: 2px solid $custom-blueblack;
+
+        &:first-child {
+            margin-top: $mobile-padding;
+        }
+
+        @include tablet {
+            margin-bottom: $tablet-padding;
+            padding: $tablet-padding;
+
+            &:first-child {
+                margin-top: $tablet-padding;
+            }
+        }
+    }
+
+    &__item-date {
+        align-self: flex-end;
+        font-size: 12px;
+        margin: 0 4px;
+        color: $graphite;
+    }
+
+    &__item-text {
+        width: 90%;
+        align-self: center;
+    }
+}

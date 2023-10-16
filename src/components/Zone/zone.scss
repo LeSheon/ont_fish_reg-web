@@ -1,0 +1,36 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.zone {
+    &__zone-list-container{
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: $mobile-padding 0;
+        list-style: none;
+    }
+
+    // Zone Text
+    &__zone {
+        font-size: 18px;
+        @include UbuntuBold;
+        padding: $mobile-padding 0;
+        
+
+        &:hover {
+            color: $custom-orange;
+            cursor: pointer;
+          }
+
+        @include tablet {
+            width: 60%;
+            text-align: center;
+            border-top: 2px solid rgb(180, 180, 180);
+            color: white;
+
+            &--first {
+                border: none;
+            }
+        }
+    }
+}

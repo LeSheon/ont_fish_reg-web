@@ -1,0 +1,33 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.zone-list {
+    
+    // Outer container for Zone List
+    &__zone-container {
+        width: 100%;
+        padding: $mobile-padding;
+        @include flex();
+        justify-content: space-around;
+
+        @include tablet {
+            width: 20%;
+            height: 95vh;
+            overflow-y: scroll;
+            background-color: $custom-blueblack;
+            border-radius: 8px;
+        }
+    }
+
+    // Inner Container
+    &__zone-text-container {
+        width: 50%;
+        @include flex();
+        justify-content: center;
+        flex-direction: column;
+
+        @include tablet {
+            width: 100%;
+        }
+    }
+}
