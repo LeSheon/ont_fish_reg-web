@@ -13,33 +13,80 @@
         @include flex();
         flex-direction: column;
         justify-content: center;
-
+        
+        // Sets Content to stop growing its width at 1280px.
         @include desktop {
             max-width: $desktop-maxwidth;
             margin: 0 auto;
         }
     }
 
+    // Title Text
     &__title {
         font-size: 28px;
         @include kanitNormal;
         font-weight: 600;
+        color: $custom-blueblack;
+        width: 100%;
+        margin: 0;
+        padding: $mobile-padding;
 
         @include tablet {
+            width: 80%;
             font-size: 36px;
+            padding: $tablet-padding;
         }
     }
 
+    // Text-Container for paragraphs
     &__text-container {
+        width: 100%;
         align-self: flex-start;
+
+        @include tablet {
+            width: 80%;
+            align-self: center;
+        }
     }
 
+    // Paragraph texts (h4)
     &__text {
         font-size: 20px;
         @include kanitNormal;
+        margin: 0;
+        padding: $mobile-padding;
 
         @include tablet {
             font-size: 26px;
+            padding: $tablet-padding;
+        }
+    }
+
+    // Few more info text container
+    &__more-info-container {
+        width: 100%;
+        align-self: center;
+
+        @include tablet {
+            width: 80%;
+        }
+    }
+
+    // Few more info Text
+    &__more-text {
+        font-size: 14px;
+        @include kanitNormal;
+        margin: 0;
+        padding: $mobile-padding;
+
+        @include tablet {
+            font-size: 20px;
+            padding: $tablet-padding;
+        }
+
+        &--bold {
+            color: $fmz-lightblue;
+            font-weight: 700;
         }
     }
 }
