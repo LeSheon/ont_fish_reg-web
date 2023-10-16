@@ -4,7 +4,7 @@ export default function Comment() {
     return (
         <section className="comment">
             <div className="comment__max-width-container">
-                <h5 className="comment__announce">This is a Comment section for Feedback or request for data that you would want from this site.</h5>
+                <h5 className="comment__announce">This Comment section is for Feedback or request for data that you would want from the site.</h5>
                 <div className="comment__list-container">
                     <ul className="comment__list">
                         <li className="comment__list-item">
@@ -29,7 +29,7 @@ export default function Comment() {
                     <div className="comment__new-password">
                         {/* small input for password in later Edit or Delete on comment */}
                     </div>
-                    <button className="comment__new-button">Send</button>
+                    {/* <button className="comment__new-button">Send</button> */}
                 </form>
             </div>
         </section>
