@@ -2,10 +2,14 @@ import "./zoneMap.scss";
 import mapboxgl from "mapbox-gl";
 import React, { useRef, useEffect, useState } from 'react';
 import fmzDummy from "../../assets/images/fisheries-management-zones.jpg";
+import { useDispatch } from "react-redux";
+import { toggleModal } from "../../redux/reducer/ZoneReduser";
 
-mapboxgl.accessToken = 'pk.eyJ1IjoibGVzaGVvbiIsImEiOiJjbG5uaW56OG4wNmg4MnFwdDZuemJpdGJyIn0.xqRMUxVQxvETDPUs-hDEhw';
+mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
 
 export default function ZoneMap() {
+
+  const dispatch = useDispatch();
 
     // Basic Variables for Mapbox setting
   const mapContainer = useRef(null);
@@ -36,9 +40,9 @@ export default function ZoneMap() {
     // Clicking a FMZ Area will toggle this function.
     map.current.on('click', 'fmz-click-area', function (e) {
       let features = map.current.queryRenderedFeatures(e.point);
-      console.log(features[0].properties.FISHERIES_);
 
-      // Should display modal of FishList with according zone.
+      //display modal of FishList with according zone.
+      dispatch(dispatch(toggleModal({toggle: true, id: features[0].properties.FISHERIES_})))
     });
 
     // Hover state on mouse cursor in FMZ Area.
