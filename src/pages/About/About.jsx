@@ -15,13 +15,13 @@ export default function About() {
                     <h4 className="about__text">
                         Fishermen in Ontario had to always download or get a physical document booklet to get specific information about 
                         the fish season and limits. I came up with the site for a personal project for ease of access for FMZ to make sure that 
-                        people can get the information and keep the regulation rule to protect nature's resources as we live.
+                        people can get the information and keep the regulation rule to protect our fish resources as we live.
                     </h4>
                 </div>
 
                 <div className="about__text-container">
                     <h4 className="about__text">
-                        The site was built and designed with React and the map feature was implemented through Mapbox's custom map through Mapbox Studio. 
+                        The site was built and designed with React and the map feature was implemented through Mapbox and their custom map style studio. 
                     </h4>
                 </div>
 

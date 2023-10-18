@@ -96,4 +96,17 @@
         width: 90%;
         align-self: center;
     }
+
+    &__new-container {
+        width: 50%;
+        padding: $mobile-padding;
+
+        @include tablet {
+            padding: $tablet-padding;
+        }
+    }
+
+    &__preview {
+        width: 100%;
+    }
 }

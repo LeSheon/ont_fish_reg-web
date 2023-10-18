@@ -1,4 +1,5 @@
 import "./comment.scss";
+import commentPreview from "../../assets/images/comment_box_preview.png";
 
 export default function Comment() {
     return (
@@ -23,6 +24,7 @@ export default function Comment() {
                 </div>
 
                 <form className="comment__new-container">
+                    <img className="comment__preview" src={commentPreview} alt="Comment Box Preview"/>
                     <div className="comment__new-text">
                         {/* Input Box over here */}
                     </div>
