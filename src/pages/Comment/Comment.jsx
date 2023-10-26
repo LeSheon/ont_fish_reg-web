@@ -25,17 +25,6 @@ export default function Comment() {
                 </div>
 
                 <NewComment />
-
-                <form className="comment__new-container">
-                    <img className="comment__preview" src={commentPreview} alt="Comment Box Preview"/>
-                    <div className="comment__new-text">
-                        {/* Input Box over here */}
-                    </div>
-                    <div className="comment__new-password">
-                        {/* small input for password in later Edit or Delete on comment */}
-                    </div>
-                    {/* <button className="comment__new-button">Send</button> */}
-                </form>
             </div>
         </section>
     );

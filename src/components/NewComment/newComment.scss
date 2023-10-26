@@ -2,28 +2,42 @@
 @use "../../styles/partials/variables" as *;
 
 .new-comment {
-    width: 80%;
+    width: 100%;
     background-color: antiquewhite;
     border-radius: 10px;
     @include flex();
     flex-direction: column;
 
+    @include tablet {
+        width: 80%;
+    }
+
     &__label {
         @include UbuntuBold;
         font-size: 13px;
-        width: 80%;
+        width: 100%;
         padding: $mobile-padding;
-
+        
+        @include tablet {
+            width: 80%;
+            padding: $tablet-padding 0;
+        }
+        
         &--pswd {
-            width: fit-content;
+            width: 100%;
+            padding: 0;
+
+            @include tablet {
+                width: fit-content;
+            }
         }
     }
 
     &__text {
-        margin: 0.5rem;
         width: 100%;
+        margin: 0.5rem 0;
         @include UbuntuRegular;
-        height: 5rem;
+        height: 8rem;
         overflow-y: hidden;
         resize: none;
         border: none;
@@ -33,15 +47,45 @@
 
     &__foot-container {
         padding: $mobile-padding;
+        padding-top: 0;
         @include flex;
-        width: 80%;
+        width: 100%;
         justify-content: flex-end;
+
+        @include tablet {
+            padding: 0;
+            padding-bottom: $tablet-padding;
+            width: 80%;
+        }
     }
 
     &__pswd {
-        margin: 0 $mobile-padding;
+        margin: 0.5rem 0;
         padding: 0.5rem;
         border: none;
         border-radius: 10px;
+        width: 100%;
+
+        @include tablet {
+            margin: 0 0.5rem;
+            width: fit-content;
+        }
+    }
+
+    &__submit {
+        width: 100%;
+        margin: 0.5rem 0;
+        padding: $mobile-padding;
+        border: none;
+        border-radius: 10px;
+        background-color: $custom-blueblack;
+        color: white;
+        @include UbuntuBold;
+        
+        @include tablet {
+            width: fit-content;
+            margin: 0;
+            margin-left: $tablet-padding;
+        }
     }
 }
