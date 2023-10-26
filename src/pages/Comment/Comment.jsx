@@ -1,5 +1,6 @@
 import "./comment.scss";
 import commentPreview from "../../assets/images/comment_box_preview.png";
+import NewComment from "../../components/NewComment/NewComment";
 
 export default function Comment() {
     return (
@@ -22,6 +23,8 @@ export default function Comment() {
                         </li>
                     </ul>
                 </div>
+
+                <NewComment />
 
                 <form className="comment__new-container">
                     <img className="comment__preview" src={commentPreview} alt="Comment Box Preview"/>
