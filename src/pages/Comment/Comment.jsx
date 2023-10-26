@@ -1,5 +1,4 @@
 import "./comment.scss";
-import commentPreview from "../../assets/images/comment_box_preview.png";
 import NewComment from "../../components/NewComment/NewComment";
 
 export default function Comment() {
