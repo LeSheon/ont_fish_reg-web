@@ -9,12 +9,12 @@ export default function NewComment() {
     return (
         <form className="new-comment">
             <label className="new-comment__label">Comment: 
-                <input className="new-comment__text">
-                </input>
+                <textarea className="new-comment__text" placeholder="Write your comment!">
+                </textarea>
             </label>
             <div className="new-comment__foot-container">
-                <label className="new-comment__label">Password:
-                    <input className="new-comment__pswd">
+                <label className="new-comment__label new-comment__label--pswd">Password:
+                    <input className="new-comment__pswd" type="password" placeholder="Password for Comment">
                     </input>
                 </label>
                 <button onClick={postComment} className="new-comment__submit">Post Comment</button>

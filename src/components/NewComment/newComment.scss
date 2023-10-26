@@ -1,3 +1,47 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
+.new-comment {
+    width: 80%;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    @include flex();
+    flex-direction: column;
+
+    &__label {
+        @include UbuntuBold;
+        font-size: 13px;
+        width: 80%;
+        padding: $mobile-padding;
+
+        &--pswd {
+            width: fit-content;
+        }
+    }
+
+    &__text {
+        margin: 0.5rem;
+        width: 100%;
+        @include UbuntuRegular;
+        height: 5rem;
+        overflow-y: hidden;
+        resize: none;
+        border: none;
+        border-radius: 10px;
+        padding: $mobile-padding;
+    }
+
+    &__foot-container {
+        padding: $mobile-padding;
+        @include flex;
+        width: 80%;
+        justify-content: flex-end;
+    }
+
+    &__pswd {
+        margin: 0 $mobile-padding;
+        padding: 0.5rem;
+        border: none;
+        border-radius: 10px;
+    }
+}
